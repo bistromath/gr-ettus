@@ -30,5 +30,13 @@
 			<block>uhd_rfnoc_ofdm_eq</block>
 			<block>uhd_rfnoc_ofdm_demap</block>
 		</cat>
-	</cat>
+    </cat>
+    <cat>
+        <name>GMRR</name>
+        <cat>
+            <name>RFNoc</name>
+            <block>uhd_rfnoc_gain</block>
+            <block>uhd_rfnoc_envelope</block>
+        </cat>
+    </cat>
 </cat>

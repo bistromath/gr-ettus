@@ -42,8 +42,14 @@
   </sink>
 
   <source>
-    <name>out</name>
-    <type>complex</type>
+    <name>mag</name>
+    <type>fc32</type>
     <domain>rfnoc</domain>
   </source>
+  <source>
+    <name>phase</name>
+    <type>fc32</type>
+    <domain>rfnoc</domain>
+  </source>
+
 </block>

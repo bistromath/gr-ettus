@@ -28,7 +28,8 @@
 			<block>uhd_rfnoc_fosphor_display</block>
 			<block>uhd_rfnoc_ofdm_schmidlcox</block>
 			<block>uhd_rfnoc_ofdm_eq</block>
-			<block>uhd_rfnoc_ofdm_demap</block>
+            <block>uhd_rfnoc_ofdm_demap</block>
+            <block>uhd_rfnoc_splitstream</block>
 		</cat>
     </cat>
     <cat>

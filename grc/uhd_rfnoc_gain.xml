@@ -17,9 +17,9 @@
     ),
     "Gain", $block_index, $device_index,
 )
-self.$(id).set_arg("gain", $gain*256)
+self.$(id).set_arg("gain", $gain)
   </make>
-  <callback>set_arg("gain", $gain*256)</callback>
+  <callback>set_arg("gain", $gain)</callback>
 
   <param>
     <name>Gain</name>
@@ -44,7 +44,7 @@ self.$(id).set_arg("gain", $gain*256)
     <tab>RFNoC Config</tab>
   </param>
 
-  <check>$gain in range(-256, 256)</check>
+  <check>$gain in range(0, 256)</check>
 
   <sink>
     <name>in</name>

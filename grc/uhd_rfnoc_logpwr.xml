@@ -6,12 +6,12 @@
   <make>ettus.rfnoc_generic(
     self.device3,
     uhd.stream_args( \# TX Stream Args
-        cpu_format="$type",
+        cpu_format="$type.type",
         otw_format="sc16",
         args="gr_vlen={0},{1}".format(${grvlen}, "" if $grvlen == 1 else "spp={0}".format($grvlen)),
     ),
     uhd.stream_args( \# RX Stream Args
-        cpu_format="$type",
+        cpu_format="$type.type",
         otw_format="sc16",
         args="gr_vlen={0},{1}".format(${grvlen}, "" if $grvlen == 1 else "spp={0}".format($grvlen)),
     ),

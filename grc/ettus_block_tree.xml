@@ -36,6 +36,7 @@
             <name>RFNoc</name>
             <block>uhd_rfnoc_gain</block>
             <block>uhd_rfnoc_envelope</block>
+            <block>uhd_rfnoc_join</block>
         </cat>
     </cat>
 </cat>

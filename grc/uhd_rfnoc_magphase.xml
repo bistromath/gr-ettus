@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<block>
+  <name>RFNoC: Magphase</name>
+  <key>uhd_rfnoc_magphase</key>
+  <import>import ettus</import>
+  <make>ettus.rfnoc_generic(
+    self.device3,
+    uhd.stream_args( \# TX Stream Args
+        cpu_format="fc32", \# TODO: This must be made an option
+        otw_format="sc16",
+        args="",
+    ),
+    uhd.stream_args( \# RX Stream Args
+        cpu_format="fc32", \# TODO: This must be made an option
+        otw_format="sc16",
+        args="",
+    ),
+    "Magphase", $block_index, $device_index,
+)
+self.$(id).set_arg("mag_gain", $mag_gain)
+self.$(id).set_arg("phase_gain", $phase_gain)
+  </make>
+  <callback>set_arg("mag_gain", $mag_gain)</callback>
+  <callback>set_arg("phase_gain", $phase_gain)</callback>
+
+  <param>
+    <name>Magnitude gain</name>
+    <key>mag_gain</key>
+    <value>1</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Phase gain</name>
+    <key>phase_gain</key>
+    <value>1</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Block Select</name>
+    <key>block_index</key>
+    <value>-1</value>
+    <type>int</type>
+    <hide>#if int($block_index()) &lt; 0 then 'part' else 'none'#</hide>
+    <tab>RFNoC Config</tab>
+  </param>
+  <param>
+    <name>Device Select</name>
+    <key>device_index</key>
+    <value>-1</value>
+    <type>int</type>
+    <hide>#if int($device_index()) &lt; 0 then 'part' else 'none'#</hide>
+    <tab>RFNoC Config</tab>
+  </param>
+
+  <check>$mag_gain in range(0, 256)</check>
+  <check>$phase_gain in range(0, 256)</check>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <domain>rfnoc</domain>
+  </sink>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <domain>rfnoc</domain>
+  </source>
+</block>

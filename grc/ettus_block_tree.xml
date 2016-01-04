@@ -44,6 +44,7 @@
 			<block>uhd_rfnoc_predistort</block>
 			<block>uhd_rfnoc_join</block>
 			<block>uhd_rfnoc_mult</block>
+			<block>uhd_rfnoc_loopbacksplit</block>
 		</cat>
 	</cat>
 </cat>

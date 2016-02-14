@@ -20,10 +20,12 @@
 self.$(id).set_arg("delay_i", $delay_i)
 self.$(id).set_arg("delay_q", $delay_q)
 self.$(id).set_arg("enable_diff", $enable_diff)
+self.$(id).set_arg("spp_out", $spp_out)
   </make>
   <callback>set_arg("delay_i", $delay_i)</callback>
   <callback>set_arg("delay_q", $delay_q)</callback>
   <callback>set_arg("enable_diff", $enable_diff)</callback>
+  <callback>set_arg("spp_out", $spp_out)</callback>
   <param>
     <name>I delay</name>
     <key>delay_i</key>
@@ -41,6 +43,12 @@ self.$(id).set_arg("enable_diff", $enable_diff)
     <key>enable_diff</key>
     <value>True</value>
     <type>bool</type>
+  </param>
+  <param>
+    <name>Output SPP</name>
+    <key>spp_out</key>
+    <value>1200</value>
+    <type>int</type>
   </param>
   <param>
     <name>Block Select</name>

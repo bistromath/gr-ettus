@@ -30,14 +30,14 @@ namespace gr {
     {
      public:
       rfnoc_predistort_cci_impl(
-          const std::vector<int> &taps,
+          const std::vector<std::vector<int> > &taps,
           const device3::sptr &dev,
           const int block_select,
           const int device_select
       );
       ~rfnoc_predistort_cci_impl();
 
-      void set_taps(const std::vector<int> &taps);
+      void set_taps(const int which, const std::vector<int> &taps);
     };
 
   } // namespace ettus

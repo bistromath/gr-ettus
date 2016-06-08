@@ -43,14 +43,14 @@ namespace gr {
        * \param device_select Device select
        */
       static sptr make(
-          const std::vector<int> &taps,
+          const std::vector<std::vector<int> >&taps,
           const device3::sptr &dev,
           const int block_select=-1,
           const int device_select=-1
       );
 
       //! Update the filter taps
-      virtual void set_taps(const std::vector<int> &taps) = 0;
+      virtual void set_taps(const int which, const std::vector<int> &taps) = 0;
     };
 
   } // namespace ettus

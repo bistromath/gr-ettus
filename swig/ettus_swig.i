@@ -49,6 +49,7 @@
 %{
 #include "ettus/device3.h"
 #include "ettus/rfnoc_fir_cci.h"
+#include "ettus/rfnoc_predistort_cci.h"
 #include "ettus/rfnoc_window_cci.h"
 #include "ettus/rfnoc_radio.h"
 #include "ettus/rfnoc_generic.h"
@@ -143,6 +144,8 @@
 GR_SWIG_BLOCK_MAGIC2(ettus, device3)
 %include "ettus/rfnoc_fir_cci.h"
 GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_fir_cci);
+%include "ettus/rfnoc_predistort_cci.h"
+GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_predistort_cci);
 %include "ettus/rfnoc_window_cci.h"
 GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_window_cci);
 %include "ettus/rfnoc_radio.h"

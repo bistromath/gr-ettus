@@ -27,6 +27,10 @@
 			<block>uhd_rfnoc_ofdm_schmidlcox</block>
 			<block>uhd_rfnoc_ofdm_eq</block>
 			<block>uhd_rfnoc_ofdm_demap</block>
+			<block>uhd_rfnoc_predistort</block>
+			<block>uhd_rfnoc_magphase</block>
+			<block>uhd_rfnoc_splitstream</block>
+			<block>uhd_rfnoc_gain</block>
 		</cat>
 	</cat>
 </cat>

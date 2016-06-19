@@ -42,6 +42,7 @@ list(APPEND ettus_sources
     rfnoc_window_cci_impl.cc
     rfnoc_radio_impl.cc
     rfnoc_generic_impl.cc
+    rfnoc_predistort_cci_impl.cc
     QFosphorColorMapper.cc
     QFosphorSurface.cc
     ${FOSPHOR_RC_SRCS}

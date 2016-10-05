@@ -57,6 +57,7 @@
 #include "ettus/rfnoc_block.h"
 #include "ettus/rfnoc_block_impl.h"
 #include "ettus/rfnoc_fosphor_c.h"
+#include "ettus/rfnoc_predistort_cci.h"
 %}
 
 #ifdef ENABLE_QT
@@ -137,6 +138,8 @@ GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_radio);
 GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_generic);
 %include "ettus/rfnoc_fosphor_c.h"
 GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_fosphor_c);
+%include "ettus/rfnoc_predistort_cci.h"
+GR_SWIG_BLOCK_MAGIC2(ettus, rfnoc_predistort_cci);
 
 #ifdef ENABLE_QT
 %include "ettus/fosphor_display.h"

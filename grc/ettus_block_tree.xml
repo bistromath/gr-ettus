@@ -35,4 +35,15 @@
 			<block>uhd_rfnoc_digital_gain</block>
 		</cat>
 	</cat>
+        <cat>
+		<name>GMRR</name>
+		<cat>
+			<name>GMRR</name>
+			<block>uhd_rfnoc_magphase</block>
+			<block>uhd_rfnoc_gain</block>
+			<block>uhd_rfnoc_predistort</block>
+			<block>uhd_rfnoc_join</block>
+			<block>uhd_rfnoc_mult</block>
+		</cat>
+	</cat>
 </cat>

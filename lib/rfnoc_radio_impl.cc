@@ -96,6 +96,19 @@ namespace gr {
       _radio_ctrl->set_rx_antenna(ant, chan);
     }
 
+    void rfnoc_radio_impl::issue_stream_cmd(const uhd::stream_cmd_t &cmd, const size_t chan)
+    {
+      _radio_ctrl->issue_stream_cmd(cmd, chan);
+    }
+
+    void rfnoc_radio_impl::set_tx_streamer(bool active, const size_t port) {
+        _radio_ctrl->set_tx_streamer(active, port);
+    }
+
+    void rfnoc_radio_impl::set_rx_streamer(bool active, const size_t port) {
+        _radio_ctrl->set_rx_streamer(active, port);
+    }
+
     // FIXME everything down from here needs to be mapped on to the block API
     void rfnoc_radio_impl::set_tx_dc_offset(bool enable, const size_t chan)
     {

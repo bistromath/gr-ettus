@@ -16,9 +16,26 @@
     #else
     -1,
     #end if
-)</make>
+)
+self.$(id).set_arg("mag_gain", $mag_gain)
+self.$(id).set_arg("squelch", $squelch)
+  </make>
   <callback>set_taps($taps)</callback>
+  <callback>set_arg("mag_gain", $mag_gain)</callback>
+  <callback>set_arg("squelch", $squelch)</callback>
 
+  <param>
+    <name>Magnitude gain</name>
+    <key>mag_gain</key>
+    <value>1</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Squelch</name>
+    <key>squelch</key>
+    <value>0</value>
+    <type>float</type>
+  </param>
   <param>
     <name>Filter Taps</name>
     <key>taps</key>
@@ -52,11 +69,6 @@
 
   <source>
     <name>out0</name>
-    <type>complex</type>
-    <domain>rfnoc</domain>
-  </source>
-  <source>
-    <name>out1</name>
     <type>complex</type>
     <domain>rfnoc</domain>
   </source>

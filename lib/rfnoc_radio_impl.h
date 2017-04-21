@@ -46,6 +46,8 @@ namespace gr {
       void set_rx_gain(const double gain, const size_t chan);
       void set_tx_antenna(const std::string &ant, const size_t chan);
       void set_rx_antenna(const std::string &ant, const size_t chan);
+      void set_tx_streamer(bool active, const size_t port);
+      void set_rx_streamer(bool active, const size_t port);
       void set_tx_dc_offset(bool enable, const size_t chan);
       void set_tx_dc_offset(const std::complex< double > &offset, const size_t chan);
       void set_rx_dc_offset(bool enable, const size_t chan);
@@ -54,6 +56,8 @@ namespace gr {
       uhd::time_spec_t get_time_now(void);
       void set_command_time(const uhd::time_spec_t &time, const size_t chan);
       void clear_command_time(const size_t chan);
+
+      void issue_stream_cmd(const uhd::stream_cmd_t &cmd, const size_t chan);
      private:
       ::uhd::rfnoc::radio_ctrl::sptr _radio_ctrl;
     };

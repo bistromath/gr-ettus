@@ -62,6 +62,9 @@ namespace gr {
       virtual void set_rx_gain(const double gain, const size_t chan=0) = 0;
       virtual void set_tx_antenna(const std::string &ant, const size_t chan=0) = 0;
       virtual void set_rx_antenna(const std::string &ant, const size_t chan=0) = 0;
+      virtual void set_tx_streamer(bool active, const size_t port) = 0;
+      virtual void set_rx_streamer(bool active, const size_t port) = 0;
+      virtual void issue_stream_cmd(const uhd::stream_cmd_t &cmd, const size_t chan=0) = 0;
       virtual void set_tx_dc_offset(bool enable, const size_t chan=0) = 0;
       virtual void set_tx_dc_offset(const std::complex< double > &offset, const size_t chan=0) = 0;
       virtual void set_rx_dc_offset(bool enable, const size_t chan=0) = 0;

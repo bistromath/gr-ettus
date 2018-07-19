@@ -19,16 +19,40 @@
 )
 self.$(id).set_arg("mag_gain", $mag_gain)
 self.$(id).set_arg("squelch", $squelch)
+self.$(id).set_arg("drive_gain", $drive_gain)
+self.$(id).set_arg("final_gain", $final_gain)
+self.$(id).set_arg("predrive_power", $predrive_power)
   </make>
   <callback>set_taps($taps)</callback>
   <callback>set_arg("mag_gain", $mag_gain)</callback>
   <callback>set_arg("squelch", $squelch)</callback>
+  <callback>set_arg("drive_gain", $drive_gain)</callback>
+  <callback>set_arg("final_gain", $final_gain)</callback>
+  <callback>set_arg("predrive_power", $predrive_power)</callback>
 
   <param>
     <name>Magnitude gain</name>
     <key>mag_gain</key>
     <value>1</value>
     <type>float</type>
+  </param>
+  <param>
+    <name>Drive gain</name>
+    <key>drive_gain</key>
+    <value>1</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Final gain</name>
+    <key>final_gain</key>
+    <value>1</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Predrive power</name>
+    <key>predrive_power</key>
+    <value>1</value>
+    <type>bool</type>
   </param>
   <param>
     <name>Squelch</name>

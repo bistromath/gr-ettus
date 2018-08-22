@@ -162,6 +162,22 @@ namespace gr {
       //get_device()->set_rx_dc_offset(offset, chan);
     }
 
+
+    void rfnoc_radio_impl::set_tx_streamer(bool active, const size_t port)
+    {
+      _radio_ctrl->set_tx_streamer(active, port);
+    }
+
+    void rfnoc_radio_impl::set_rx_streamer(bool active, const size_t port)
+    {
+       _radio_ctrl->set_rx_streamer(active, port);
+    }
+
+    void rfnoc_radio_impl::issue_stream_cmd(const uhd::stream_cmd_t &cmd, const size_t chan)
+    {
+      _radio_ctrl->issue_stream_cmd(cmd, chan);
+    }
+
     std::vector<std::string> rfnoc_radio_impl::get_rx_lo_names(const size_t chan)
     {
         return _radio_ctrl->get_rx_lo_names(chan);

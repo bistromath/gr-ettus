@@ -62,6 +62,10 @@ namespace gr {
       void set_rx_dc_offset(bool enable, const size_t chan);
       void set_rx_dc_offset(const std::complex< double > &offset, const size_t chan);
 
+      void set_tx_streamer(bool active, const size_t port);
+      void set_rx_streamer(bool active, const size_t port);
+      void issue_stream_cmd(const uhd::stream_cmd_t &cmd, const size_t chan=0);
+
       std::vector<std::string> get_rx_lo_names(const size_t chan);
       std::vector<std::string> get_rx_lo_sources(const std::string &name, const size_t chan);
       uhd::freq_range_t get_rx_lo_freq_range(const std::string &name, const size_t chan);
